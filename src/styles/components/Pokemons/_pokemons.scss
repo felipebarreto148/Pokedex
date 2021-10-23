@@ -1,0 +1,60 @@
+main#body {
+	display: flex;
+	justify-content: center;
+
+	& > #pokemons > div {
+		padding: 20px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 5em;
+		grid-row-gap: 2em;
+
+		@media (max-width: 1000px) {
+			grid-template-columns: repeat(2, 1fr);
+
+			@media (max-width: 700px) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+}
+
+
+@keyframes slide-in {
+	from {
+		transform: translateY(40px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-out {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(40px);
+	}
+}
+
+.slide-enter-active {
+	animation: slide-in 2s ease;
+	transition: opacity 2s;
+}
+
+.slide-leave-active {
+	position: absolute;
+	width: 100%;
+	animation: slide-out 2s ease;
+}
+
+.slide-enter,
+.slide-leave-to {
+	opacity: 0;
+}
+
+.slide-move {
+	transition: transform 1s;
+}
+

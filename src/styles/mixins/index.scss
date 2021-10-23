@@ -1,0 +1,25 @@
+@mixin modifiers($map, $attribute) {
+	@each $key, $value in $map {
+		&--#{$key} {
+			#{$attribute}: $value;
+		}
+	}
+}
+
+@mixin box-shadow-colors($map){
+	@each $key, $value in $map {
+		&.bg--#{$key} {
+			box-shadow: rgba($value, 0.4) 5px 5px, rgba($value, 0.3) 10px 10px,
+			rgba($value, 0.2) 15px 15px, rgba($value, 0.1) 20px 20px,
+			rgba($value, 0.05) 25px 25px;
+		}
+	}
+}
+
+@mixin background-opacity($map){
+	@each $key, $value in $map {
+		&.bg--#{$key}{
+			background: rgba($color: $value, $alpha: 0.3);
+		}
+	}
+}
