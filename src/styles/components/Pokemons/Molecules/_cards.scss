@@ -1,6 +1,6 @@
 @import '@/styles/main.scss';
 
-.card {
+.card-body {
 	width: 250px;
 	height: 250px;
 	display: flex;
@@ -14,8 +14,8 @@
 	display: flex;
 	justify-content: center;
 
-	&.bg{
-		@include modifiers($colors, 'background')
+	&.bg {
+		@include modifiers($colors, 'background');
 	}
 
 	& > h3 {
