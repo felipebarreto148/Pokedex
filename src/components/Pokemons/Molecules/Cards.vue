@@ -58,7 +58,6 @@ export default {
 	},
 	methods: {
 		open() {
-			console.log(this.pokemon);
 			const MODALINFO = this.$refs.modal;
 
 			if (MODALINFO) {
